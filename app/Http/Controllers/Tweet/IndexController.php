@@ -16,7 +16,8 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $tweets = Tweet::orderBy('created_at', 'DESC')->get();
+        $tweets = Tweet::orderBy('created_at', 'DESC')->get(); // クエリでのソート
+        // $tweets = Tweet::all()->sortByDesc('created_at'); // PHPでのソート
         return view('tweet.index')
             ->with('tweets', $tweets);
     }
