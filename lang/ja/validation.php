@@ -21,6 +21,9 @@ return [
     'alpha_dash'           => ':attributeには、英数字(\'A-Z\',\'a-z\',\'0-9\')とハイフンと下線(\'-\',\'_\')が使用できます。',
     'alpha_num'            => ':attributeには、英数字(\'A-Z\',\'a-z\',\'0-9\')が使用できます。',
     'array'                => ':attributeには、配列を指定してください。',
+    'attributes'           => [
+        'tweet' => 'つぶやき'
+    ],
     'before'               => ':attributeには、:dateより前の日付を指定してください。',
     'before_or_equal'      => ':attributeには、:date以前の日付を指定してください。',
     'between'              => [
