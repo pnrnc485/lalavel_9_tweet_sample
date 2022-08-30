@@ -10,6 +10,9 @@
     <div>
         <a href="{{ route('tweet.index') }}"> 戻る</a>
         <p>編集フォーム</p>
+        @if (session('feedback.success'))
+            <p style="color: green">{{ session('feedback.success') }}</p>
+        @endif
         <form action="{{ route('tweet.update.put', ['tweetId' => $tweet->id]) }}" method="post">
             @method('PUT')
             @csrf
