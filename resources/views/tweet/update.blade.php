@@ -23,7 +23,7 @@
             @error('tweet')
             <p style="color: red;">{{ $message }}</p>
             @enderror
-            <button type="submit">編集</button>
+            <button type="submit">保存</button>
         </form>
     </div>
 </body>
