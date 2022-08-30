@@ -7,11 +7,6 @@
     </head>
 <body>
     <h1>つぶやきアプリ</h1>
-    {{-- <div>
-        @foreach($tweets as $tweet)
-            <p>{{ $tweet->content }}</p>
-        @endforeach
-    </div> --}}
     <div>
         <p>投稿フォーム</p>
         <form action="{{ route('tweet.create') }}" method="post">
@@ -25,6 +20,11 @@
             @enderror
             <button type="submit">投稿</button>
         </form>
+    </div>
+    <div>
+        @foreach($tweets as $tweet)
+            <p>{{ $tweet->content }}</p>
+        @endforeach
     </div>
 </body>
 </html>
