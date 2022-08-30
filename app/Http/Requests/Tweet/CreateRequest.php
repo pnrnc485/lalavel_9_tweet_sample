@@ -13,7 +13,8 @@ class CreateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        // true = だれでもリクエストできる false = 認証をもってるユーザでないとリクエストできない
+        return true;
     }
 
     /**
@@ -24,7 +25,8 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            // 必須にするのと文字数制限を設定
+            'tweet' => 'required|max:140'
         ];
     }
 }
