@@ -13,7 +13,7 @@ class UpdateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,12 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'tweet' => 'required|max:140'
         ];
+    }
+
+    public function tweet(): string
+    {
+        return $this->input('tweet');
     }
 }
