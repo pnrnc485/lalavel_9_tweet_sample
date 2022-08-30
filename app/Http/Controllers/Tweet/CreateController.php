@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\Tweet;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use APp\http\Requests\Tweet\CreateRequest;
+use App\http\Requests\Tweet\CreateRequest;
 
 class CreateController extends Controller
 {
